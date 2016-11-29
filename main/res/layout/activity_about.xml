@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.chaacho.pets1.About">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/miApbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/aboutLayout"
+        tools:showIn="@layout/activity_about"
+        android:scrollbars="vertical"
+        android:scrollbarTrackVertical="@layout/activity_about">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="@string/herbert_rodriguez"
+            android:ems="12"
+            android:id="@+id/TextNombre"
+            android:isScrollContainer="true"
+            android:keepScreenOn="true"
+            android:imeOptions="actionNone"
+            android:freezesText="true"
+            android:clickable="false"
+            tools:ignore="RtlHardcoded,TextViewEdits"
+            android:textSize="24sp"
+            android:layout_marginTop="65dp"
+            android:textStyle="normal|bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="center" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/TextViewTexto"
+            android:text="@string/TextoDan"
+            android:textSize="14sp"
+            android:lineSpacingExtra="8sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:clickable="true"
+            android:layout_marginTop="28dp"
+            android:layout_below="@+id/TextNombre"
+             />
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

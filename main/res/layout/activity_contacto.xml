@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.chaacho.pets1.Contacto">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/miApbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_contacto" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layoutcontacto">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="89dp"
+            android:id="@+id/editTextNom"
+            android:freezesText="false"
+            style="@style/Widget.AppCompat.EditText"
+            android:hint="@string/Nombre" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:layout_below="@+id/editTextNom"
+            android:layout_alignRight="@+id/editTextNom"
+            android:layout_alignEnd="@+id/editTextNom"
+            android:layout_marginTop="25dp"
+            android:id="@+id/editTextEmail"
+            style="@style/Widget.AppCompat.EditText"
+            android:hint="@string/e_mail" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:layout_below="@+id/editTextEmail"
+            android:layout_alignLeft="@+id/editTextEmail"
+            android:layout_alignStart="@+id/editTextEmail"
+            android:layout_marginTop="40dp"
+            android:id="@+id/editTextMensaje"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:freezesText="false"
+            android:hint="@string/mensaje" />
+
+        <Button
+            android:text="@string/enviar_comentario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextMensaje"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="113dp"
+            android:id="@+id/buttEnvComentario"
+            tools:text="@string/Enviar_comentario"
+            android:onClick="enviaCorreo"/>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

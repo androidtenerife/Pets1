@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvMascota"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/cv_layout_margin"
+    android:elevation="5dp"
+    android:layout_centerVertical="false">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="4dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/cvImgFoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/cv_layout_margin"
+            android:contentDescription="@string/imagen_de_pet"
+            android:src="@drawable/dog1"
+            card_view:srcCompat="@drawable/dog5"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerInParent="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:isScrollContainer="false"
+            android:keepScreenOn="false"
+            android:hapticFeedbackEnabled="false"
+            android:clickable="true"
+            android:contextClickable="true"
+            tools:ignore="UnusedAttribute"
+            />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/cvImgFoto"
+            android:layout_below="@id/cvImgFoto"
+            android:contentDescription="@string/boton"
+            card_view:srcCompat="@drawable/huesooff"
+            android:layout_marginLeft="0dp"
+            android:backgroundTint="@color/cardview_light_background"
+            tools:ignore="RtlHardcoded,UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/cvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cvnombre"
+            android:textStyle="bold"
+            android:layout_alignBottom="@id/imageButton3"
+            android:layout_toRightOf="@id/imageButton3"
+            android:layout_marginLeft="@dimen/cv_layout_margin"
+            android:layout_marginTop="@dimen/cv_layout_margin"
+            android:layout_marginBottom="@dimen/cv_layout_margin"
+            android:textSize="12sp"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/huesoon"
+            android:layout_alignBottom="@id/imageButton3"
+            android:backgroundTint="@color/cardview_light_background"
+            android:paddingBottom="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignWithParentIfMissing="false"
+            tools:ignore="ContentDescription,RtlHardcoded,UnusedAttribute"
+            android:onClick="irRating" />
+
+        <TextView
+            android:id="@+id/cvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/imageButton4"
+            android:layout_alignBottom="@id/imageButton3"
+            android:text="@string/rating"
+            android:layout_margin="@dimen/cv_layout_margin"
+            android:layout_alignParentRight="false"
+            tools:ignore="RtlHardcoded" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
